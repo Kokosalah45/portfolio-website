@@ -1,0 +1,12 @@
+
+number of columns = X 
+number of gutters = number of columns - 1 * 2
+percentage of gutter = number of gutters * 1% b3tbar en el margin ana 7ato ya3ny 1%
+span X 
+width : 100% / X - percentage of gutters 
+
+
+
+
+icon color after convertion
+ 	#ff305b

@@ -1,0 +1,564 @@
+* {
+	box-sizing: border-box;
+	margin-top : 0;
+	margin-bottom : 0;
+}
+body {
+	margin: 0;
+	color: #555555;
+	font-family: "Roboto", sans-serif;
+
+}
+
+.main > * , .footer {
+	padding-top: 4em;
+	padding-bottom: 4em;
+}
+ul {
+	margin: 0;
+	padding: 0;
+}
+a {
+	background-color: transparent;
+	text-decoration: none;
+	color: white;
+}
+li {
+	list-style-type: none;
+}
+
+img {
+	display: block;
+	width: 100%;
+}
+.clr {
+	clear: both;
+}
+/*--------sizing algorithm  description we el paint fe el  document------*/
+:root{
+	
+	--numberOfColumns : 1;
+	--defaultBoxSize : 6.3333333333333333333333333333333%;
+	--percentageOfGutter : 1%;
+	--numberOfGutters : calc(calc(var(--numberOfColumns) - 1) * 2);
+	--totalPercentageOfGutters : calc(var(--numberOfGutters) * var(--percentageOfGutter) );
+	 
+	
+	
+}
+[class*="span"]{
+	margin : 0 var(--percentageOfGutter);
+}
+
+.span1{
+	width : calc(var(--defaultBoxSize) * var(--numberOfColumns) + var(--totalPercentageOfGutters));
+	
+}
+.span2{
+	--numberOfColumns : 2;
+	--numberOfGutters : calc(calc(var(--numberOfColumns) - 1) * 2);
+	--totalPercentageOfGutters : calc(var(--numberOfGutters) * var(--percentageOfGutter) );
+	 
+	width: calc(var(--defaultBoxSize) * var(--numberOfColumns) + var(--totalPercentageOfGutters));
+}
+.span3{
+	--numberOfColumns : 3;
+	--numberOfGutters : calc(calc(var(--numberOfColumns) - 1) * 2);	
+	--totalPercentageOfGutters : calc(var(--numberOfGutters) * var(--percentageOfGutter) );
+	 
+	width: calc(var(--defaultBoxSize) * var(--numberOfColumns) + var(--totalPercentageOfGutters));
+}
+
+.span4{
+	--numberOfColumns : 4;
+	--numberOfGutters : calc(calc(var(--numberOfColumns) - 1) * 2);
+	--totalPercentageOfGutters : calc(var(--numberOfGutters) * var(--percentageOfGutter) );
+	 
+	width: calc(var(--defaultBoxSize) * var(--numberOfColumns) + var(--totalPercentageOfGutters));
+}
+.span5{
+	--numberOfColumns : 5;
+	--numberOfGutters : calc(calc(var(--numberOfColumns) - 1) * 2);
+	--totalPercentageOfGutters : calc(var(--numberOfGutters) * var(--percentageOfGutter) );
+	 
+	width : calc(var(--defaultBoxSize) * var(--numberOfColumns) + var(--totalPercentageOfGutters));
+	
+}
+.span6{
+	--numberOfColumns : 6;
+	--numberOfGutters : calc(calc(var(--numberOfColumns) - 1) * 2);
+	--totalPercentageOfGutters : calc(var(--numberOfGutters) * var(--percentageOfGutter) );
+	 
+	width: calc(var(--defaultBoxSize) * var(--numberOfColumns) + var(--totalPercentageOfGutters));
+}
+.span7{
+	--numberOfColumns : 7;
+	--numberOfGutters : calc(calc(var(--numberOfColumns) - 1) * 2);
+	--totalPercentageOfGutters : calc(var(--numberOfGutters) * var(--percentageOfGutter) );
+	 	
+	width: calc(var(--defaultBoxSize) * var(--numberOfColumns) + var(--totalPercentageOfGutters));
+}
+
+.span8{
+	    --numberOfColumns : 8;
+		--numberOfGutters : calc(calc(var(--numberOfColumns) - 1) * 2);
+		--totalPercentageOfGutters : calc(var(--numberOfGutters) * var(--percentageOfGutter) );
+	 
+		width: calc(var(--defaultBoxSize) * var(--numberOfColumns) + var(--totalPercentageOfGutters));
+	
+}
+.span9{
+	--numberOfColumns : 9;
+	--numberOfGutters : calc(calc(var(--numberOfColumns) - 1) * 2);
+	--totalPercentageOfGutters : calc(var(--numberOfGutters) * var(--percentageOfGutter) );
+	 	
+	width : calc(var(--defaultBoxSize) * var(--numberOfColumns) + var(--totalPercentageOfGutters));
+	
+}
+.span10{
+	--numberOfColumns : 10;
+	--numberOfGutters : calc(calc(var(--numberOfColumns) - 1) * 2);
+	--totalPercentageOfGutters : calc(var(--numberOfGutters) * var(--percentageOfGutter) );
+	 	
+	width: calc(var(--defaultBoxSize) * var(--numberOfColumns) + var(--totalPercentageOfGutters));
+}
+.span11{
+	--numberOfColumns : 11;
+	--numberOfGutters : calc(calc(var(--numberOfColumns) - 1) * 2);
+	--totalPercentageOfGutters : calc(var(--numberOfGutters) * var(--percentageOfGutter) );
+	 	
+	width: calc(var(--defaultBoxSize) * var(--numberOfColumns) + var(--totalPercentageOfGutters));
+}
+
+.span12{
+	    --numberOfColumns : 12;
+		--numberOfGutters : calc(calc(var(--numberOfColumns) - 1) * 2);
+		--totalPercentageOfGutters : calc(var(--numberOfGutters) * var(--percentageOfGutter) );
+	 	
+		width: calc(var(--defaultBoxSize) * var(--numberOfColumns) + var(--totalPercentageOfGutters));
+	
+}
+
+
+
+
+/*-----modifiers-----*/
+.text-transform-uc{
+    text-transform: uppercase;
+}
+.text-transform-c{
+    text-transform: capitalize;
+}
+.clr-lightpink{
+    color: hsl(347.5, 100%, 59.4%);
+}
+/*------wrapper------*/
+.wrapper {
+	width: 95%;
+	max-width: 70rem;
+	margin: 0 auto;
+    height : 100%;
+}
+/*----------------------------hero---------------------------*/
+.hero {
+	font-weight: 300;
+    position: relative;
+	height: 100vh;
+	background-image: url(./img/slider/slider-01.jpg);
+	background-repeat: repeat;
+	background-size: cover;
+	background-position: center;
+  
+}
+.hero::before{
+    content: "";
+    inset : 0 0 ;
+    background : hsla(0, 0%, 0%, 0.8);
+    position: absolute;
+  
+}
+/*--------hero-NAV--------*/
+.hero__nav {
+    position: relative;
+	padding: 1.2em;
+}
+.nav__links{
+	float: right;
+}
+.nav__links li{
+	float: left;
+}
+.nav__links li:not(:last-child) {
+	margin-right: 1.2em;
+
+}
+.nav__hamburger {
+	display : none;
+	float: right;
+	margin: .15em 0 0 .5em;
+	cursor: pointer;
+    
+}
+.nav__hamburger > * {
+	padding: .1em;
+	width: 25px;
+	background-color: white;
+	margin-bottom: 0.2em;
+}
+.nav__logo {
+	float: left;
+
+    
+}
+.nav__logo a {
+	font-size: 1.4em;
+	font-weight: bold;
+}
+/*--------hero-SECTION--------*/
+.hero__section{
+    position: relative;
+    height: calc(100% - 92px);
+    text-align: center;
+	color : white;
+}
+.hero__section .wrapper{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.section__intro > *{
+	margin: 0 0 10px 0 ;
+}
+.section__intro > :first-child{
+	font-weight: bold;
+	font-size: 1.3em;
+	letter-spacing: 1px;
+
+
+}
+.section__intro > :last-child{
+	font-size: 1.5em;
+	font-weight: 300;
+
+
+}
+.intro__main-header{
+    font-size: 4em;
+    font-weight: bold;
+
+   
+}
+/*----------------about-section---------------*/
+.about__personal-img{
+	float: left;
+	border : 10px solid hsl(0, 0%, 33.3%);
+	border-radius: 10px;
+
+}
+.about__personal-img img{
+	position: relative;
+	top: 15px;
+	left: 15px;
+	border-radius: 10px;
+	
+}
+.about__personal-info{
+	float: left;
+	padding-left: 1em;
+}
+.about__personal-info h2{
+	font-size : 2rem;
+	padding: 0 0 0 .3em;
+	border-left : 4px solid hsl(348deg 100% 59%); 
+	color: black;
+    margin-bottom: .5em;
+
+}  /* el mafrod tt3ml pos absolute bas ana mksl*/
+.about__personal-info p{
+	border-bottom: 1px dashed #999999; margin-bottom: 25px;
+	padding-bottom: 25px;
+	max-width: 65ch;
+	line-height: 1.5;
+}
+
+.about__personal-info tr{
+	display: block;
+	margin-bottom: 1em;
+	
+}
+.about__personal-info td{
+	display: inline-block;
+}
+.about__personal-info td:nth-child(2n+1) {
+	width: 40%;
+}
+.about__personal-info td:nth-child(2n) {
+	 margin-left: .5em;
+	width: 55%;
+}
+
+.about__personal-info td > span{
+	font-weight: 600;
+	color : black;
+	
+}
+
+
+/*----------------services-section---------------*/
+.main__services,.main__stats,.main__blog{
+	text-align: center;
+	background: #f1f1f1;
+
+}
+
+.services__header,
+.portfolio__header,
+.blog__header,
+.testimonial__header,
+.contact-us__header{
+	text-transform: capitalize;
+	margin-bottom: .5em;
+	padding-bottom : .5em;
+	font-size: 2.5rem;
+	color : black;
+}
+.services__item{
+	float: left;
+}
+.services__item__logo i {
+color: hsl(347.5, 100%, 59.4%);
+display: block;
+font-size: 36px;
+margin-bottom: 20px;
+
+}
+.services__item h4 {
+	font-size: 1.5rem;
+	font-weight: 500;
+	margin-bottom: 15px;
+	
+	}
+	.services__item p {
+		line-height: 1.5;
+		
+		}
+
+
+/*----------------portofolio-section---------------*/
+.main__portfolio{
+	text-align: center;
+}
+.main__portfolio ul{
+	text-transform: uppercase;
+	margin-bottom: 1em;
+}
+.main__portfolio ul:first-of-type li{
+	display : inline-block;
+	cursor: pointer;
+
+}
+.main__portfolio ul:first-of-type li:not(last-child){
+	margin-right: 1em;
+	
+}
+.main__portfolio ul:last-child li{
+	float: left;
+	margin-bottom: 1em;
+
+}
+/*3a4an da kda kda el last child we kaman ul fa m4 fr2a ba2a lol*/
+.main__portfolio ul:first-of-type li:not(last-child){
+	margin-right: 1em;
+	
+}
+
+
+/*----------------stats-section---------------*/
+.main__stats{
+	padding-top: 5em;
+	padding-bottom: 5em;
+}
+.stats__stat-item{
+	float: left;
+	margin-bottom: 1em;
+	
+}
+
+.stat-item__img i{
+color: hsl(347.5, 100%, 59.4%);
+font-size: 1.625rem;
+margin-bottom: 15px;
+}
+.stat-item__val{
+	font-size: 2rem;
+	font-weight: bold;
+	margin-bottom: 1rem;
+}
+.state-item__key{
+	font-weight: 700;
+	color : hsl(0, 0%, 33.3%);
+	font-size: 1.2rem;
+}
+
+/*----------------testomnial-section---------------*/
+.main__testimonial h2{
+	text-align: center;
+}
+.testimonial__item{
+	padding: 2.5em ;
+	margin: 0 auto;
+	background-color: hsl(0, 0%, 94.5%) ;
+	border-radius:10px;
+	position: relative;
+	overflow: hidden;
+}
+.testimonial__item::before{
+	content: "";
+	position: absolute;
+	width: 400px;
+	height: 400px;
+	clip-path: polygon(0.5% 151px, 65.5% 36.5%, 1px 86.25%);
+	background-color: hsl(347.5, 100%, 59.4%);
+	left: 0;
+	top: -150px;
+	border-radius: 10px;
+}
+.testimonial__item h3{
+	font-size: 26px;
+margin-bottom: 10px;
+}
+.testimonial__item .item__client-feedback{
+	padding-left : 1em;
+}
+.testimonial__item .item__client-feedback > *{
+margin-bottom: .5em;
+}
+.testimonial__item > :not(:last-child){
+	float: left;
+	
+}
+.testimonial__item figure{
+	position: relative;
+	text-align: center;
+	margin-bottom: 1em;
+	
+}
+.testimonial__item figure img{
+	max-width: 150px;
+	display : inline-block;
+	border-radius: 50%;
+}
+.item__rating {
+	color : hsl(47.9, 89.8%, 49.8%);
+}
+
+/*----------------blog-section---------------*/
+.main__blog h2{
+	text-align: center;
+}
+.blog__item{
+	float: left;
+	text-align: left;
+	background-color: white;
+	
+}
+.blog__item .item__container{
+	padding : 1.5em;
+}
+.blog__item .item__container > *{
+	margin-bottom: .7em;
+} 
+.blog__item h3{
+	font-size: 1.5rem;
+	text-transform: capitalize;
+} 
+.blog__item a{
+	color : gray;
+}
+/*----------------contactus-section---------------*/
+.contact-us__form{
+	margin: 0 auto;
+}
+.contact-us__form  li{
+	margin-bottom : 1em;
+}
+.contact-us__form input,textarea{
+	padding: .7em;
+	border-radius: 4px;
+	border: 1px solid hsl(0, 0%, 80%);
+}
+.contact-us__form li:first-child input{
+	float: left;
+	
+}
+.contact-us__header{
+	text-align: center;
+}
+.contact-us__form [type="submit"]{
+	background-color: hsl(347.5, 100%, 59.4%);
+	color: white;
+	margin-left: .5em;
+	border : 1px solid hsl(347.5, 100%, 59.4%);
+	font-weight: bold;
+} /*mksl*/
+
+
+/*----------------footer-section---------------*/
+.footer{
+	color: white;
+	 background: hsl(0, 0%, 20%) ;
+	 text-align:center;
+}
+.footer ul{
+	margin-bottom: 1em;
+}
+.footer li{
+	display: inline-block;
+	margin-right: .5em;
+}
+
+
+
+/*----media queries----*/
+@media screen and (max-width: 992px){
+	.span12-md{
+		--numberOfColumns : 12;
+		--numberOfGutters : calc(calc(var(--numberOfColumns) - 1) * 2);
+		--totalPercentageOfGutters : calc(var(--numberOfGutters) * var(--percentageOfGutter) );
+	 	
+		width: calc(var(--defaultBoxSize) * var(--numberOfColumns) + var(--totalPercentageOfGutters));
+		
+	}
+	
+	.span6-md{
+		--numberOfColumns : 6;
+		--numberOfGutters : calc(calc(var(--numberOfColumns) - 1) * 2);
+		--totalPercentageOfGutters : calc(var(--numberOfGutters) * var(--percentageOfGutter) );
+	 	
+		width: calc(var(--defaultBoxSize) * var(--numberOfColumns) + var(--totalPercentageOfGutters));
+	}
+	.about__personal-img{
+		border : none;
+		margin-bottom: 1.5em;
+	
+	}
+	.about__personal-img img{
+		position: static;
+	
+	}
+
+	
+}
+@media screen and (max-width: 768px){
+	.span12-sm{
+		--numberOfColumns : 12;
+		--numberOfGutters : calc(calc(var(--numberOfColumns) - 1) * 2);
+		--totalPercentageOfGutters : calc(var(--numberOfGutters) * var(--percentageOfGutter) );
+	 	
+		width: calc(var(--defaultBoxSize) * var(--numberOfColumns) + var(--totalPercentageOfGutters));
+	}
+	.contact-us__form  li:first-child input:first-child{
+		margin-bottom : 1em;
+	}
+	
+}
