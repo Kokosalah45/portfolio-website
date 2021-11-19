@@ -1,0 +1,135 @@
+:root{
+	
+	--numberOfColumns : 1;
+	--defaultBoxSize : 6.3333333333333333333333333333333%;
+	--percentageOfGutter : 1%;
+	--numberOfGutters : calc(calc(var(--numberOfColumns) - 1) * 2);
+	--totalPercentageOfGutters : calc(var(--numberOfGutters) * var(--percentageOfGutter) );
+	 
+	
+	
+}
+[class*="span"]{
+	margin : 0 var(--percentageOfGutter);
+}
+
+.span1{
+	width : calc(var(--defaultBoxSize) * var(--numberOfColumns) + var(--totalPercentageOfGutters));
+	
+}
+.span2{ 
+	--numberOfColumns : 2;
+	--numberOfGutters : calc(calc(var(--numberOfColumns) - 1) * 2);
+	--totalPercentageOfGutters : calc(var(--numberOfGutters) * var(--percentageOfGutter) );
+	 
+	width: calc(var(--defaultBoxSize) * var(--numberOfColumns) + var(--totalPercentageOfGutters));
+}
+.span3{
+	--numberOfColumns : 3;
+	--numberOfGutters : calc(calc(var(--numberOfColumns) - 1) * 2);	
+	--totalPercentageOfGutters : calc(var(--numberOfGutters) * var(--percentageOfGutter) );
+	 
+	width: calc(var(--defaultBoxSize) * var(--numberOfColumns) + var(--totalPercentageOfGutters));
+}
+
+.span4{
+	--numberOfColumns : 4;
+	--numberOfGutters : calc(calc(var(--numberOfColumns) - 1) * 2);
+	--totalPercentageOfGutters : calc(var(--numberOfGutters) * var(--percentageOfGutter) );
+	 
+	width: calc(var(--defaultBoxSize) * var(--numberOfColumns) + var(--totalPercentageOfGutters));
+}
+.span5{
+	--numberOfColumns : 5;
+	--numberOfGutters : calc(calc(var(--numberOfColumns) - 1) * 2);
+	--totalPercentageOfGutters : calc(var(--numberOfGutters) * var(--percentageOfGutter) );
+	 
+	width : calc(var(--defaultBoxSize) * var(--numberOfColumns) + var(--totalPercentageOfGutters));
+	
+}
+.span6{
+	--numberOfColumns : 6;
+	--numberOfGutters : calc(calc(var(--numberOfColumns) - 1) * 2);
+	--totalPercentageOfGutters : calc(var(--numberOfGutters) * var(--percentageOfGutter) );
+	 
+	width: calc(var(--defaultBoxSize) * var(--numberOfColumns) + var(--totalPercentageOfGutters));
+}
+.span7{
+	--numberOfColumns : 7;
+	--numberOfGutters : calc(calc(var(--numberOfColumns) - 1) * 2);
+	--totalPercentageOfGutters : calc(var(--numberOfGutters) * var(--percentageOfGutter) );
+	 	
+	width: calc(var(--defaultBoxSize) * var(--numberOfColumns) + var(--totalPercentageOfGutters));
+}
+
+.span8{
+	    --numberOfColumns : 8;
+		--numberOfGutters : calc(calc(var(--numberOfColumns) - 1) * 2);
+		--totalPercentageOfGutters : calc(var(--numberOfGutters) * var(--percentageOfGutter) );
+	 
+		width: calc(var(--defaultBoxSize) * var(--numberOfColumns) + var(--totalPercentageOfGutters));
+	
+}
+.span9{
+	--numberOfColumns : 9;
+	--numberOfGutters : calc(calc(var(--numberOfColumns) - 1) * 2);
+	--totalPercentageOfGutters : calc(var(--numberOfGutters) * var(--percentageOfGutter) );
+	 	
+	width : calc(var(--defaultBoxSize) * var(--numberOfColumns) + var(--totalPercentageOfGutters));
+	
+}
+.span10{
+	--numberOfColumns : 10;
+	--numberOfGutters : calc(calc(var(--numberOfColumns) - 1) * 2);
+	--totalPercentageOfGutters : calc(var(--numberOfGutters) * var(--percentageOfGutter) );
+	 	
+	width: calc(var(--defaultBoxSize) * var(--numberOfColumns) + var(--totalPercentageOfGutters));
+}
+.span11{
+	--numberOfColumns : 11;
+	--numberOfGutters : calc(calc(var(--numberOfColumns) - 1) * 2);
+	--totalPercentageOfGutters : calc(var(--numberOfGutters) * var(--percentageOfGutter) );
+	 	
+	width: calc(var(--defaultBoxSize) * var(--numberOfColumns) + var(--totalPercentageOfGutters));
+}
+
+.span12{
+	    --numberOfColumns : 12;
+		--numberOfGutters : calc(calc(var(--numberOfColumns) - 1) * 2);
+		--totalPercentageOfGutters : calc(var(--numberOfGutters) * var(--percentageOfGutter) );
+	 	
+		width: calc(var(--defaultBoxSize) * var(--numberOfColumns) + var(--totalPercentageOfGutters));
+	
+}
+
+@media screen and (max-width: 992px){
+	.span12-md{
+		--numberOfColumns : 12;
+		--numberOfGutters : calc(calc(var(--numberOfColumns) - 1) * 2);
+		--totalPercentageOfGutters : calc(var(--numberOfGutters) * var(--percentageOfGutter) );
+	 	
+		width: calc(var(--defaultBoxSize) * var(--numberOfColumns) + var(--totalPercentageOfGutters));
+		
+	}
+	
+	.span6-md{
+		--numberOfColumns : 6;
+		--numberOfGutters : calc(calc(var(--numberOfColumns) - 1) * 2);
+		--totalPercentageOfGutters : calc(var(--numberOfGutters) * var(--percentageOfGutter) );
+	 	
+		width: calc(var(--defaultBoxSize) * var(--numberOfColumns) + var(--totalPercentageOfGutters));
+	}
+
+
+	
+}
+@media screen and (max-width: 768px){
+	.span12-sm{
+		--numberOfColumns : 12;
+		--numberOfGutters : calc(calc(var(--numberOfColumns) - 1) * 2);
+		--totalPercentageOfGutters : calc(var(--numberOfGutters) * var(--percentageOfGutter) );
+	 	
+		width: calc(var(--defaultBoxSize) * var(--numberOfColumns) + var(--totalPercentageOfGutters));
+	}
+
+}

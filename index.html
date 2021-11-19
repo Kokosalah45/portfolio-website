@@ -7,7 +7,8 @@
     <title>Fokir - Personal Portofolio Bootstrap</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="sizing.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="./all.css">
     <link rel="stylesheet" href="./icofont.css">
@@ -26,7 +27,7 @@
                     <div></div>
                     
                               </div>
-                    <ul class="nav__links text-transform-c">
+                    <ul class="nav__links text-transform-c " data-visbile = "false">
                         <li><a href="#">home</a></li>
                         <li><a href="#">about</a></li>
                         <li><a href="#">services</a></li>
@@ -36,7 +37,7 @@
                         <li><a href="#">Contact</a></li>
                         <div class="clr"></div>
                     </ul>
-                    <div class="clr"></div>
+                  
               </div>
             </nav>
             <section class="hero__section">
@@ -88,7 +89,7 @@
          </div>
      </div>
      <div class="main__services">
-         <div class="wrapper">
+         <div class="wrapper"> 
              <h2 class="services__header">our services</h2>
              <div class="services__item span3 span6-md span12-sm">
                 <div class="services__item__logo">
@@ -130,7 +131,7 @@
                  </p>
              </div>
              <div class="clr"></div>
-         </div>
+         </div> 
      </div>
      <div class="main__portfolio">
         <div class="wrapper">
@@ -303,5 +304,22 @@
          <p>Copy Right 2018 © By Theme-fair All Rights Reserved</p>
      </div>
  </div>
+ <script>
+     const hamburger = document.querySelector('.nav__hamburger');
+     const body = document.querySelector('body');
+     const navLinks = document.querySelector('.nav__links');
+     body.addEventListener('click' ,  (e) => {
+         
+         if(e.target != navLinks && navLinks.classList.contains('nav_visible')){
+             navLinks.classList.remove('nav_visible');
+             
+         }
+      },true)
+     hamburger.addEventListener('click' ,  (e) => {
+        navLinks.classList.add('nav_visible');
+         navLinks.setAttribute('data-nav' , true);
+     })
+    
+ </script>
 </body>
 </html>

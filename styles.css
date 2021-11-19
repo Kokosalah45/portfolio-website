@@ -35,110 +35,6 @@ img {
 	clear: both;
 }
 /*--------sizing algorithm  description we el paint fe el  document------*/
-:root{
-	
-	--numberOfColumns : 1;
-	--defaultBoxSize : 6.3333333333333333333333333333333%;
-	--percentageOfGutter : 1%;
-	--numberOfGutters : calc(calc(var(--numberOfColumns) - 1) * 2);
-	--totalPercentageOfGutters : calc(var(--numberOfGutters) * var(--percentageOfGutter) );
-	 
-	
-	
-}
-[class*="span"]{
-	margin : 0 var(--percentageOfGutter);
-}
-
-.span1{
-	width : calc(var(--defaultBoxSize) * var(--numberOfColumns) + var(--totalPercentageOfGutters));
-	
-}
-.span2{
-	--numberOfColumns : 2;
-	--numberOfGutters : calc(calc(var(--numberOfColumns) - 1) * 2);
-	--totalPercentageOfGutters : calc(var(--numberOfGutters) * var(--percentageOfGutter) );
-	 
-	width: calc(var(--defaultBoxSize) * var(--numberOfColumns) + var(--totalPercentageOfGutters));
-}
-.span3{
-	--numberOfColumns : 3;
-	--numberOfGutters : calc(calc(var(--numberOfColumns) - 1) * 2);	
-	--totalPercentageOfGutters : calc(var(--numberOfGutters) * var(--percentageOfGutter) );
-	 
-	width: calc(var(--defaultBoxSize) * var(--numberOfColumns) + var(--totalPercentageOfGutters));
-}
-
-.span4{
-	--numberOfColumns : 4;
-	--numberOfGutters : calc(calc(var(--numberOfColumns) - 1) * 2);
-	--totalPercentageOfGutters : calc(var(--numberOfGutters) * var(--percentageOfGutter) );
-	 
-	width: calc(var(--defaultBoxSize) * var(--numberOfColumns) + var(--totalPercentageOfGutters));
-}
-.span5{
-	--numberOfColumns : 5;
-	--numberOfGutters : calc(calc(var(--numberOfColumns) - 1) * 2);
-	--totalPercentageOfGutters : calc(var(--numberOfGutters) * var(--percentageOfGutter) );
-	 
-	width : calc(var(--defaultBoxSize) * var(--numberOfColumns) + var(--totalPercentageOfGutters));
-	
-}
-.span6{
-	--numberOfColumns : 6;
-	--numberOfGutters : calc(calc(var(--numberOfColumns) - 1) * 2);
-	--totalPercentageOfGutters : calc(var(--numberOfGutters) * var(--percentageOfGutter) );
-	 
-	width: calc(var(--defaultBoxSize) * var(--numberOfColumns) + var(--totalPercentageOfGutters));
-}
-.span7{
-	--numberOfColumns : 7;
-	--numberOfGutters : calc(calc(var(--numberOfColumns) - 1) * 2);
-	--totalPercentageOfGutters : calc(var(--numberOfGutters) * var(--percentageOfGutter) );
-	 	
-	width: calc(var(--defaultBoxSize) * var(--numberOfColumns) + var(--totalPercentageOfGutters));
-}
-
-.span8{
-	    --numberOfColumns : 8;
-		--numberOfGutters : calc(calc(var(--numberOfColumns) - 1) * 2);
-		--totalPercentageOfGutters : calc(var(--numberOfGutters) * var(--percentageOfGutter) );
-	 
-		width: calc(var(--defaultBoxSize) * var(--numberOfColumns) + var(--totalPercentageOfGutters));
-	
-}
-.span9{
-	--numberOfColumns : 9;
-	--numberOfGutters : calc(calc(var(--numberOfColumns) - 1) * 2);
-	--totalPercentageOfGutters : calc(var(--numberOfGutters) * var(--percentageOfGutter) );
-	 	
-	width : calc(var(--defaultBoxSize) * var(--numberOfColumns) + var(--totalPercentageOfGutters));
-	
-}
-.span10{
-	--numberOfColumns : 10;
-	--numberOfGutters : calc(calc(var(--numberOfColumns) - 1) * 2);
-	--totalPercentageOfGutters : calc(var(--numberOfGutters) * var(--percentageOfGutter) );
-	 	
-	width: calc(var(--defaultBoxSize) * var(--numberOfColumns) + var(--totalPercentageOfGutters));
-}
-.span11{
-	--numberOfColumns : 11;
-	--numberOfGutters : calc(calc(var(--numberOfColumns) - 1) * 2);
-	--totalPercentageOfGutters : calc(var(--numberOfGutters) * var(--percentageOfGutter) );
-	 	
-	width: calc(var(--defaultBoxSize) * var(--numberOfColumns) + var(--totalPercentageOfGutters));
-}
-
-.span12{
-	    --numberOfColumns : 12;
-		--numberOfGutters : calc(calc(var(--numberOfColumns) - 1) * 2);
-		--totalPercentageOfGutters : calc(var(--numberOfGutters) * var(--percentageOfGutter) );
-	 	
-		width: calc(var(--defaultBoxSize) * var(--numberOfColumns) + var(--totalPercentageOfGutters));
-	
-}
-
 
 
 
@@ -178,38 +74,30 @@ img {
   
 }
 /*--------hero-NAV--------*/
+.hero__nav .wrapper{
+	display: flex;
+	justify-content:space-between;
+	align-items: center;
+}
 .hero__nav {
     position: relative;
 	padding: 1.2em;
+
 }
 .nav__links{
-	float: right;
+	display : flex;
+	gap : 1em;
 }
-.nav__links li{
-	float: left;
-}
-.nav__links li:not(:last-child) {
-	margin-right: 1.2em;
 
-}
+
 .nav__hamburger {
 	display : none;
-	float: right;
-	margin: .15em 0 0 .5em;
 	cursor: pointer;
+	position: relative;
+	 z-index: 6;
     
 }
-.nav__hamburger > * {
-	padding: .1em;
-	width: 25px;
-	background-color: white;
-	margin-bottom: 0.2em;
-}
-.nav__logo {
-	float: left;
 
-    
-}
 .nav__logo a {
 	font-size: 1.4em;
 	font-weight: bold;
@@ -310,6 +198,12 @@ img {
 	background: #f1f1f1;
 
 }
+.main__services .container{
+	text-align: center;
+	background: #f1f1f1;
+
+}
+
 
 .services__header,
 .portfolio__header,
@@ -521,22 +415,18 @@ margin-bottom: .5em;
 
 /*----media queries----*/
 @media screen and (max-width: 992px){
-	.span12-md{
-		--numberOfColumns : 12;
-		--numberOfGutters : calc(calc(var(--numberOfColumns) - 1) * 2);
-		--totalPercentageOfGutters : calc(var(--numberOfGutters) * var(--percentageOfGutter) );
-	 	
-		width: calc(var(--defaultBoxSize) * var(--numberOfColumns) + var(--totalPercentageOfGutters));
-		
-	}
+	/* .hero__nav .wrapper{
+		flex-direction: column;
+		gap : 1em;
+		align-items: stretch;
 	
-	.span6-md{
-		--numberOfColumns : 6;
-		--numberOfGutters : calc(calc(var(--numberOfColumns) - 1) * 2);
-		--totalPercentageOfGutters : calc(var(--numberOfGutters) * var(--percentageOfGutter) );
-	 	
-		width: calc(var(--defaultBoxSize) * var(--numberOfColumns) + var(--totalPercentageOfGutters));
+
 	}
+	.nav__links{
+		display : flex;
+		margin : 0;
+		justify-content: center;
+	} */
 	.about__personal-img{
 		border : none;
 		margin-bottom: 1.5em;
@@ -550,15 +440,46 @@ margin-bottom: .5em;
 	
 }
 @media screen and (max-width: 768px){
-	.span12-sm{
-		--numberOfColumns : 12;
-		--numberOfGutters : calc(calc(var(--numberOfColumns) - 1) * 2);
-		--totalPercentageOfGutters : calc(var(--numberOfGutters) * var(--percentageOfGutter) );
-	 	
-		width: calc(var(--defaultBoxSize) * var(--numberOfColumns) + var(--totalPercentageOfGutters));
+	.hero__nav .wrapper { 
+		flex-direction: row;
 	}
+	.nav__links{
+		position: fixed;
+		inset : 0 0 0 150%;
+		flex-direction: column;
+		align-items: center;
+		gap: 1.5em;
+		
+		padding: 1.5em;
+		font-size: 1.2rem;
+		background : hsl(0 0% 50% /0.75);
+		z-index: 5;
+		justify-content:center;
+		transition: left .5s ease-in-out;
+		 
+	}
+	.nav__links > li{
+		margin : 0;
+	}
+	.nav__hamburger{
+		display: flex;
+		flex-direction:column;
+		gap : .3em;
+	}
+	.nav__hamburger > * {
+		height : 2px;
+		width: 25px;
+		background-color: white;
+		
+		
+	}
+	
 	.contact-us__form  li:first-child input:first-child{
 		margin-bottom : 1em;
 	}
 	
 }
+.nav_visible{
+	left : 60%;
+}
+/*at event click inset 60%*/
