@@ -80,13 +80,24 @@ img {
 	align-items: center;
 }
 .hero__nav {
-    position: relative;
-	padding: 1.2em;
+    position: fixed;
+	padding: .9em;
+	width: 100%;
+	z-index: 99;
+	transition : all 200ms ease-in-out;
+	
+	
 
+}
+.moveup{
+	transform : translateY(-100%);
 }
 .nav__links{
 	display : flex;
 	gap : 1em;
+}
+.nav__links a{
+	font-size: .8rem;
 }
 
 
@@ -105,7 +116,7 @@ img {
 /*--------hero-SECTION--------*/
 .hero__section{
     position: relative;
-    height: calc(100% - 92px);
+    height: 100vh;
     text-align: center;
 	color : white;
 }
@@ -113,6 +124,11 @@ img {
     display: flex;
     justify-content:center;
     align-items: center;
+}
+.section__intro{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 .section__intro > *{
 	margin: 0 0 10px 0 ;
@@ -127,9 +143,21 @@ img {
 .section__intro > :last-child{
 	font-size: 1.5em;
 	font-weight: 300;
-
-
+	border-right: 2px solid white;
+	transition: width 0.5s ease-in-out;
+	width: 14.2ch; 
+	overflow: hidden;
+	white-space: nowrap;
+} /*specifity a3la lazem a7ot important*/
+.showdev{
+	width: 22.7ch !important;
 }
+
+.section__intro > :last-child span{
+	display: inline-block;
+}
+
+
 .intro__main-header{
     font-size: 4em;
     font-weight: bold;
