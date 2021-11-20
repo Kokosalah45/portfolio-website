@@ -15,6 +15,7 @@ const showHideDevClosure = () =>{
         showDevChild.textContent = whatiCanDo[i++];
 
         showDev.classList.add('showdev');
+        //kol mara ba7ot fe el task queue showdev be 3s we 7atet timeout gowa m4 (interval tany bara we adbdl bnhom) la2en da badeheyan 8abawa 3a4an hybd2o fe nafs el wa2t kol mara fe el browser api fa 3a4an kda 3mlt timeout gowa 3a4an adman en el queuing hy7sl wra el interval 3la tool m4 at the same time 
         setTimeout(() => {
             showDev.classList.remove('showdev');
         } , 1500)
@@ -24,7 +25,7 @@ const showHideDevClosure = () =>{
 //closure 3a4an asave el i we el array fe el function backpack bt3tha m4 el local store mtnsa4
 //set interval hdwr 3ndha m4 htla2i httl3 3la backpack generated func htl2eha
 
-//kol mara ba7ot fe el task queue showdev be 3s we 7atet timout gowa m4 interval tany gowa 3a4an adman en el queuing hy7sl wra el interval 3la tool m4 at the same time 
+
 const showHideDev = showHideDevClosure;
 showHideDev();
 
